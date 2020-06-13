@@ -1,0 +1,73 @@
+.content
+.advantages
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__item
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 10px
+    width: 30%
+    border: 1px solid #ededee
+    margin: 15px 0
+    &-1
+      background-color: #fde1ec
+    &-2
+      background-color: #d9f4f5
+      margin: 15px
+    &-3
+      background-color: #ffffff
+
+.main
+  &-slider
+    width: 100%
+    margin-top: 30px
+    &__slide
+      width: 100%
+      position: relative
+      height: 773px
+      padding: 40px
+    &__image
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      z-index: -1
+    &__title
+      @include af(100, 21)
+      max-width: 40%
+      font-weight: 900
+    &__block-small
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      max-width: 40%
+      margin: 30px 0
+    &__button
+      background-color: #81dcdd
+      height: 60px
+      width: 260px
+      text-align: center
+      padding: 10px
+      font-size: 18px
+      font-weight: 600
+    &__subtitle
+      padding: 0 30px
+      @include af(18, 10)
+
+
+@media (min-width: 1366px)
+  .main-slider
+    &__title
+      font-size: 100px
+    &__subtitle
+      font-size: 18px
+  
+  
+@media (max-width: 320px)
+  .main-slider__block-small
+    display: none
+  

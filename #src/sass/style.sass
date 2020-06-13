@@ -1,0 +1,52 @@
+*
+  padding: 0
+  margin: 0
+  border: 0
+  font-family: sans-serif
+
+*, *:before, *:after
+  box-sizing: border-box
+
+*, *:before, *:after
+  box-sizing: border-box
+
+a, a:focus
+  activeoutline: none
+  text-decoration: none
+  color: #000000
+
+nav, footer, header
+  asidedisplay: block
+
+html, body
+  height: 100%
+  width: 100%
+  font-size: 100%
+  line-height: 1
+  font-size: 14px
+
+input, button
+  textareafont-family: inherit
+
+button
+  cursor: pointer
+
+h1,h2,h3,h4,h5,h6
+  font-size: inherit
+  font-weight: 400
+
+img
+  max-width: 100%
+  max-height: 100%
+
+
+$maxWidth: 1366;
+@mixin af($pcSize, $mobSize)
+ $addSize: $pcSize - $mobSize;
+ $maxWidth: $maxWidth - 320;
+ font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+
+
+@import "blocks/_header"
+@import "blocks/_index-content"
+@import "blocks/_offer"
