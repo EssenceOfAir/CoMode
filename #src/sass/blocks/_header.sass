@@ -17,6 +17,11 @@
   justify-content: space-between
   &__wrapper
     width: 30%
+  &__item
+    @include af(20, 14)
+    &:hover
+      text-decoration: underline
+      color: #9f005d
 .logo
   &__wrapper
     display: flex
@@ -32,3 +37,8 @@
     display: flex
     justify-content: flex-end
     align-items: center
+
+
+@media (max-width: 1366px)
+  .container
+    padding: 0 10px

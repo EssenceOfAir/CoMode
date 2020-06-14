@@ -1,0 +1,46 @@
+.footer
+  &__wrapper
+    width: 100%
+    padding-top: 50px
+    padding-bottom: 15px
+    border-top: 2px solid #dfdfd2
+    margin-top: 50px
+  &__menu
+    display: grid
+    grid-template-columns: 25% 25% 25% 25%
+    &-item
+      display: flex
+      flex-direction: column
+    &-links
+      display: flex
+      flex-direction: column
+    &-title
+      @include af(30, 20)
+      margin-bottom: 10px
+    &-link
+      margin: 5px 0
+      @include af(20, 14)
+      &:hover
+        text-decoration: underline
+
+@media (max-width: 992px)
+  .footer__menu
+    grid-template-columns: 50% 50%
+    grid-template-rows: 50% 50%
+    &-item
+      margin-bottom: 20px
+    &-title
+      position: relative
+      &::after
+        position: absolute
+        content: ""
+        width: 40px
+        height: 3px
+        background-color: #dfdfd2
+        bottom: -5px
+        left: 0
+
+@media (max-width: 500px)
+  .footer__menu
+    grid-template-columns: 100%
+    grid-template-rows: 25% 25% 25% 25%

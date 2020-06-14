@@ -10,7 +10,7 @@
     align-items: center
     justify-content: center
     padding: 10px
-    width: 30%
+    width: 33%
     border: 1px solid #ededee
     margin: 15px 0
     &-1
@@ -20,42 +20,56 @@
       margin: 15px
     &-3
       background-color: #ffffff
-
+  &__title
+    font-weight: 700
+    @include af(20, 14)
+  &__subtitle
+    @include af(16, 12)
+@media (max-width: 380px)
+  .advantages
+    &__wrapper
+      flex-direction: column
+    &__item
+      width: 100%
+      margin: 0
+  
 .main
   &-slider
     width: 100%
     margin-top: 30px
     &__slide
       width: 100%
-      position: relative
-      height: 773px
-      padding: 40px
+      display: flex
+      flex-direction: column
     &__image
-      position: absolute
-      top: 0
-      left: 0
+      position: relative
       width: 100%
       z-index: -1
+    &__text
+      position: absolute
+      top: 50%
+      transform: translate(10%, -50%)
     &__title
       @include af(100, 21)
       max-width: 40%
       font-weight: 900
+      flex: 1 1 auto
     &__block-small
       display: flex
       align-items: center
-      justify-content: flex-start
-      max-width: 40%
+      justify-content: space-between
+      max-width: 50%
       margin: 30px 0
     &__button
       background-color: #81dcdd
-      height: 60px
-      width: 260px
+      height: 10%
+      width: 40%
       text-align: center
       padding: 10px
-      font-size: 18px
+      @include af(18, 10)
       font-weight: 600
     &__subtitle
-      padding: 0 30px
+      max-width: 50%
       @include af(18, 10)
 
 
@@ -65,6 +79,11 @@
       font-size: 100px
     &__subtitle
       font-size: 18px
+  .advantages
+    &__title
+      font-size: 20px
+    &__subtitle
+      font-size: 16px
   
   
 @media (max-width: 320px)
