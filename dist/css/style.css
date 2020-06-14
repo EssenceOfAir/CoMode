@@ -885,7 +885,7 @@ img {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 391px) {
   .advantages__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
