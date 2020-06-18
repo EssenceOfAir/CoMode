@@ -12,7 +12,7 @@
   <body>
     <div class="burger__layer"></div>
     <div class="container">
-      <header class="header">
+      <header  id="swipeHeader" class="header">
         <div class="header__wrapper">
           <div class="header__burger">
             <span></span>
@@ -21,7 +21,7 @@
             <nav class="nav">
               <a href="#"><div class="nav__item">Главная</div></a>
               <a href="#"><div class="nav__item">Тренды</div></a>
-              <a href="#"><div class="nav__item">Магазин</div></a>
+              <a href="#"><div class="nav__item">Каталог</div></a>
               <a href="#"><div class="nav__item">Корзина</div></a>
               <a href="#"><div class="nav__item">Контакты</div></a>
             </nav>
@@ -39,7 +39,7 @@
 
 
       <div class="content">
-        <section class="advantages">
+        <section id="swipeAdvantages" class="advantages">
           <div class="advantages__wrapper">
             <div class="advantages__item advantages__item-1">
               <div class="advantages__title">FREE STADARD DELIVERY</div>
@@ -101,7 +101,7 @@
           <!-- /.main-slider -->
         </div>
         <!-- /.main-slider__wrapper -->
-        <section class="offers">
+        <section id="swipeOffers" class="offers">
           <div class="offer__wrapper">
             <div class="offer__item offer__item-1">
               <div class="offer__image"><img src="./img/offer/1.jpg" alt="" class="offer__img"></div> 
@@ -245,47 +245,33 @@
 
 
 
-      <footer class="footer">
+      <footer id="swipeFooter" class="footer">
         <div class="footer__wrapper">
           <div class="footer__menu">
-            <div class="footer__menu-item">
-              <div class="footer__menu-title">Полезные ссылки</div>
-              <div class="footer__menu-links">
-                <a href="#" class="footer__menu-link">Ссылка</a>
-                <a href="#" class="footer__menu-link">Ссылка</a>
-                <a href="#" class="footer__menu-link">Ссылка</a>
-                <a href="#" class="footer__menu-link">Ссылка</a>
-                <a href="#" class="footer__menu-link">Ссылка</a>
-              </div>
-            </div>
-            <div class="footer__menu-item">
-              <div class="footer__menu-title">Компания</div>
-              <div class="footer__menu-links">
-                <a href="#" class="footer__menu-link">Ссылка</a>
-                <a href="#" class="footer__menu-link">Ссылка</a>
-                <a href="#" class="footer__menu-link">Ссылка</a>
-                <a href="#" class="footer__menu-link">Ссылка</a>
-                <a href="#" class="footer__menu-link">Ссылка</a>
-              </div>
-            </div>
-            <div class="footer__menu-item">
-              <div class="footer__menu-title">Профиль</div>
-              <div class="footer__menu-links">
-                <a href="#" class="footer__menu-link">Ссылка</a>
-                <a href="#" class="footer__menu-link">Ссылка</a>
-                <a href="#" class="footer__menu-link">Ссылка</a>
-                <a href="#" class="footer__menu-link">Ссылка</a>
-                <a href="#" class="footer__menu-link">Ссылка</a>
+            <div class="footer__menu-item footer__nav">
+              <div class="footer__menu-title">Навигация</div>
+              <div class="footer__menu-links footer__links1">
+                <a href="#" class="footer__menu-link">Главная</a>
+                <a href="#" class="footer__menu-link">Каталог</a>
+                <a href="#" class="footer__menu-link">Корзина</a>
+                <a href="#" class="footer__menu-link">Контакты</a>
+                <a href="#" class="footer__menu-link">О нас</a>
               </div>
             </div>
             <div class="footer__menu-item">
               <div class="footer__menu-title">Контакты</div>
-              <div class="footer__menu-links">
-                <a href="#" class="footer__menu-link">Ссылка</a>
-                <a href="#" class="footer__menu-link">Ссылка</a>
-                <a href="#" class="footer__menu-link">Ссылка</a>
-                <a href="#" class="footer__menu-link">Ссылка</a>
-                <a href="#" class="footer__menu-link">Ссылка</a>
+              <div class="footer__menu-links footer__links2">
+                <a href="tel:+79999999999" class="footer__menu-link">+79999999999</a>
+                <a href="https://maps.google.com?saddr=Current+Location&daddr=43.4258522,39.9233649,17" class="footer__menu-link">г. Сочи ул. Ленина д. 1</a>
+              </div>
+            </div>
+            <div class="footer__menu-item footer__social">
+              <div class="footer__menu-title">Мы в соцсетях</div>
+              <div class="footer__menu-links footer__links3">
+                <a href="#" class="footer__menu-link-social"><img src="./img/svg/instagram.svg" alt="" class="social-icon"></a>
+                <a href="#" class="footer__menu-link-social"><img src="./img/svg/vk.svg" alt="" class="social-icon"></a>
+                <a href="#" class="footer__menu-link-social"><img src="./img/svg/whatsapp.svg" alt="" class="social-icon"></a>
+                <a href="#" class="footer__menu-link-social"><img src="./img/svg/telegram.svg" alt="" class="social-icon"></a>
               </div>
             </div>
           </div>
@@ -297,6 +283,7 @@
     <!-- /.container -->
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.touchSwipe.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
     <script src="./js/script.min.js"></script>

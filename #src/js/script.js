@@ -239,3 +239,35 @@ $(document).ready(function () {
     const viewport_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
   }
 }());
+$(function () {
+  //Keep track of how many swipes
+  var count = 0;
+  //Enable swiping...
+  $("#swipe,.burger__layer,.header").swipe({
+    //Single swipe handler for left swipes
+    swipeRight: function (event, direction, distance, duration, fingerCount) {
+      $('.header__burger,.nav__wrapper').removeClass('active');
+      $('body').removeClass('lock');
+      $('.content').removeClass('blur');
+      $('.burger__layer').removeClass('burger__layer-active');
+    },
+    //Default is 75px, set to 0 for demo so any distance triggers swipe
+    threshold: 50
+  });
+});
+$(function () {
+  //Keep track of how many swipes
+  var count = 0;
+  //Enable swiping...
+  $("#swipe,.header").swipe({
+    //Single swipe handler for left swipes
+    swipeLeft: function (event, direction, distance, duration, fingerCount) {
+      $('.header__burger,.nav__wrapper').addClass('active');
+      $('body').addClass('lock');
+      $('.content').addClass('blur');
+      $('.burger__layer').addClass('burger__layer-active');
+    },
+    //Default is 75px, set to 0 for demo so any distance triggers swipe
+    threshold: 50
+  });
+});

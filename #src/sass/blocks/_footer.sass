@@ -1,4 +1,5 @@
 .footer
+  margin-bottom: 20px
   &__wrapper
     width: 100%
     padding-top: 50px
@@ -6,29 +7,65 @@
     border-top: 2px solid #dfdfd2
     margin-top: 50px
   &__menu
-    display: grid
-    grid-template-columns: 25% 25% 25% 25%
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+    &-title
+      &::after
+        left: 50%
+        transform: translateX(-50%)
     &-item
+      width: 33%
       display: flex
       flex-direction: column
     &-links
       display: flex
       flex-direction: column
+      min-height: 30px
+      align-items: center
+      margin-top: 10px
     &-title
       @include af(30, 20)
       margin-bottom: 10px
+      text-align: center
     &-link
       margin: 5px 0
       @include af(20, 14)
       &:hover
         text-decoration: underline
+.social-icon
+  width: 30px
+  height: 30px
+.footer
+  &__links
+    &1
+      align-items: center
+      flex-direction: row
+      justify-content: center
+      & a
+        margin: 0 10px
+    &2
+      flex-direction: row
+      align-items: center
+      justify-content: center
+      & a
+        margin: 0 10px
+    &3
+      margin-top: 10px
+      justify-content: center
+      flex-direction: row
+  .social-icon
+    margin: 0 10px
+  &__social
+    grid-column: 1/3
 
 @media (max-width: 992px)
+  .footer__nav
+    min-width: 320px
   .footer__menu
-    grid-template-columns: 50% 50%
-    grid-template-rows: 50% 50%
     &-item
       margin-bottom: 20px
+      width: 50%
     &-title
       position: relative
       &::after
@@ -38,9 +75,33 @@
         height: 3px
         background-color: #dfdfd2
         bottom: -5px
-        left: 0
+        left: 50%
+        transform: translateX(-50%)
 
 @media (max-width: 500px)
   .footer__menu
-    grid-template-columns: 100%
-    grid-template-rows: 25% 25% 25% 25%
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    &-title
+      &::after
+        left: 50%
+        transform: translateX(-50%)
+    &-links
+      flex-direction: row
+      justify-content: space-around
+    &-item
+      margin: 15px 0
+      text-align: center
+  .footer
+    &__links
+      &1
+      &2
+        height: 40px
+        flex-direction: column
+        justify-content: space-between
+      &3
+        margin-top: 10px
+        justify-content: center
+  .social-icon
+    margin: 0 10px
